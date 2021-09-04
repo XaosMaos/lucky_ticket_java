@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">luckyticket_java</string>
+    <string name="button_text">I am Lucky</string>
+    <string name="hint">Введите 6 цифр</string>
+    <string name="not_text">Введите цифры</string>
+
+
+</resources>
