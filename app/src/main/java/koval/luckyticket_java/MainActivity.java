@@ -32,15 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 String digits = number.getText().toString();
 
                 if (digits.length() == maxLength) {
-                    int in_0 = Integer.parseInt(digits.substring(0, 1));
-                    int in_1 = Integer.parseInt(digits.substring(1, 2));
-                    int in_2 = Integer.parseInt(digits.substring(2, 3));
-                    int in_3 = Integer.parseInt(digits.substring(3, 4));
-                    int in_4 = Integer.parseInt(digits.substring(4, 5));
-                    int in_5 = Integer.parseInt(digits.substring(5, 6));
-
-                    int sum_a = in_0 + in_1 + in_2;
-                    int sum_b = in_3 + in_4 + in_5;
+                    int sum_a = Integer.parseInt(digits.substring(0, 3));
+                    int sum_b = Integer.parseInt(digits.substring(3, 6));
 
                     if (sum_a == sum_b) {
                         Toast.makeText(getApplicationContext(),R.string.yes, Toast.LENGTH_LONG).show();
