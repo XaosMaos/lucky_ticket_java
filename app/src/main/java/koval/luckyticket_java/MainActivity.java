@@ -43,15 +43,15 @@ public class MainActivity extends AppCompatActivity {
                     int sum_b = in_3 + in_4 + in_5;
 
                     if (sum_a == sum_b) {
-                        Toast.makeText(getApplicationContext(), "You are LUCKY", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),R.string.yes, Toast.LENGTH_LONG).show();
                         bubl.setImageResource(R.drawable.bubl_green);
                     } else {
-                        Toast.makeText(getApplicationContext(), "YOU LOSE", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),R.string.no, Toast.LENGTH_LONG).show();
                         bubl.setImageResource(R.drawable.bubl_red);
                     }
 
                 } else {
-                    Toast.makeText(MainActivity.this, "мало цифр", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,R.string.dig, Toast.LENGTH_LONG).show();
 
                 }
             }
