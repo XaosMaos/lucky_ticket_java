@@ -25,29 +25,28 @@ public class MainActivity extends AppCompatActivity {
         bubl = findViewById(R.id.bubl);
         button = findViewById(R.id.button);
 
+        button.setOnClickListener(this::onClick);
+    }
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String digits = number.getText().toString();
+    public void onClick(View view) {
+        String digits = number.getText().toString();
 
-                if (digits.length() == maxLength) {
-                    int sum_a = Integer.parseInt(digits.substring(0, 3));
-                    int sum_b = Integer.parseInt(digits.substring(3, 6));
+        if (digits.length() == maxLength) {
+            int sum_a = Integer.parseInt(digits.substring(0, 3));
+            int sum_b = Integer.parseInt(digits.substring(3, 6));
 
-                    if (sum_a == sum_b) {
-                        Toast.makeText(getApplicationContext(),R.string.yes, Toast.LENGTH_LONG).show();
-                        bubl.setImageResource(R.drawable.bubl_green);
-                    } else {
-                        Toast.makeText(getApplicationContext(),R.string.no, Toast.LENGTH_LONG).show();
-                        bubl.setImageResource(R.drawable.bubl_red);
-                    }
-
-                } else {
-                    Toast.makeText(MainActivity.this,R.string.dig, Toast.LENGTH_LONG).show();
-
-                }
+            if (sum_a == sum_b) {
+                Toast.makeText(getApplicationContext(), R.string.yes, Toast.LENGTH_LONG).show();
+                bubl.setImageResource(R.drawable.bubl_green);
+            } else {
+                Toast.makeText(getApplicationContext(), R.string.no, Toast.LENGTH_LONG).show();
+                bubl.setImageResource(R.drawable.bubl_red);
             }
-        });
+
+        } else {
+            Toast.makeText(MainActivity.this, R.string.dig, Toast.LENGTH_LONG).show();
+
+        }
     }
 }
+
